@@ -3,13 +3,13 @@ kind: Service
 metadata:
   labels:
     app: backend
-  name: backend-service
+  name: backend-svc
 spec:
   selector:
     app: backend
   type: ClusterIP
   ports:
-    - name: service-port
+    - name: http
       port: 8080
       protocol: TCP
-      targetPort: deployment-port
+      targetPort: http
